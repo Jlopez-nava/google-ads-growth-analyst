@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Fictional paid-search decision dashboard</title>
+  <desc id="desc">A recruiter-facing dashboard preview containing only synthetic Acme data.</desc>
+  <rect width="1440" height="900" fill="#f5f6fa"/>
+  <rect width="1440" height="132" fill="#ffffff"/>
+  <circle cx="74" cy="64" r="28" fill="#4285f4"/>
+  <text x="66" y="74" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff">G</text>
+  <text x="122" y="52" font-family="Arial, sans-serif" font-size="14" letter-spacing="2" fill="#747b87">PAID SEARCH · DECISION INTELLIGENCE</text>
+  <text x="122" y="88" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#242932">Ads Performance Report</text>
+  <text x="1060" y="50" font-family="Arial, sans-serif" font-size="14" fill="#747b87">FICTIONAL ACCOUNT</text>
+  <text x="1060" y="79" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#242932">Acme Growth — Demo</text>
+  <text x="1060" y="105" font-family="Arial, sans-serif" font-size="14" fill="#4285f4">Aug 2 – Aug 31 · 30 days</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="42" y="158" width="320" height="120" rx="10" fill="#ffffff" stroke="#dde1e8"/>
+    <text x="66" y="192" font-size="13" letter-spacing="1.5" fill="#8b919d">TOTAL SPEND</text>
+    <text x="66" y="242" font-size="34" font-weight="700" fill="#4285f4">$8,462</text>
+    <rect x="384" y="158" width="320" height="120" rx="10" fill="#ffffff" stroke="#dde1e8"/>
+    <text x="408" y="192" font-size="13" letter-spacing="1.5" fill="#8b919d">CLICKS</text>
+    <text x="408" y="242" font-size="34" font-weight="700" fill="#6c63c7">1,267</text>
+    <rect x="726" y="158" width="320" height="120" rx="10" fill="#ffffff" stroke="#dde1e8"/>
+    <text x="750" y="192" font-size="13" letter-spacing="1.5" fill="#8b919d">CONVERSIONS</text>
+    <text x="750" y="242" font-size="34" font-weight="700" fill="#29984c">94</text>
+    <rect x="1068" y="158" width="330" height="120" rx="10" fill="#ffffff" stroke="#dde1e8"/>
+    <text x="1092" y="192" font-size="13" letter-spacing="1.5" fill="#8b919d">COST / CONVERSION</text>
+    <text x="1092" y="242" font-size="34" font-weight="700" fill="#d49c00">$90.02</text>
+  </g>
+  <rect x="42" y="304" width="842" height="320" rx="12" fill="#ffffff" stroke="#dde1e8"/>
+  <text x="72" y="348" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#242932">Daily spend and conversions</text>
+  <line x1="86" y1="568" x2="842" y2="568" stroke="#dfe3e9"/>
+  <line x1="86" y1="502" x2="842" y2="502" stroke="#edf0f4"/>
+  <line x1="86" y1="436" x2="842" y2="436" stroke="#edf0f4"/>
+  <polyline points="96,520 150,496 204,506 258,464 312,482 366,440 420,452 474,414 528,438 582,398 636,420 690,384 744,410 822,366" fill="none" stroke="#4285f4" stroke-width="5"/>
+  <g fill="#4285f4">
+    <circle cx="96" cy="520" r="5"/><circle cx="204" cy="506" r="5"/><circle cx="312" cy="482" r="5"/><circle cx="420" cy="452" r="5"/><circle cx="528" cy="438" r="5"/><circle cx="636" cy="420" r="5"/><circle cx="744" cy="410" r="5"/><circle cx="822" cy="366" r="5"/>
+  </g>
+  <rect x="908" y="304" width="490" height="320" rx="12" fill="#ffffff" stroke="#dde1e8"/>
+  <text x="938" y="348" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#242932">Executive decision brief</text>
+  <rect x="938" y="378" width="430" height="62" rx="8" fill="#eef9f1"/>
+  <text x="960" y="404" font-family="Arial, sans-serif" font-size="14" fill="#237f40">PROTECT</text>
+  <text x="960" y="427" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#242932">Keep the proven core efficient</text>
+  <rect x="938" y="456" width="430" height="62" rx="8" fill="#fff8e8"/>
+  <text x="960" y="482" font-family="Arial, sans-serif" font-size="14" fill="#9b7000">REPAIR</text>
+  <text x="960" y="505" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#242932">Tighten weaker search intent</text>
+  <rect x="938" y="534" width="430" height="62" rx="8" fill="#edf4ff"/>
+  <text x="960" y="560" font-family="Arial, sans-serif" font-size="14" fill="#3978d5">VALIDATE</text>
+  <text x="960" y="583" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#242932">Confirm pipeline quality before scale</text>
+  <rect x="42" y="650" width="1356" height="206" rx="12" fill="#ffffff" stroke="#dde1e8"/>
+  <text x="72" y="694" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#242932">Campaign portfolio</text>
+  <g font-family="Arial, sans-serif" font-size="14" fill="#747b87">
+    <text x="72" y="736">CAMPAIGN</text><text x="610" y="736">SPEND</text><text x="800" y="736">CONVERSIONS</text><text x="1048" y="736">CPA</text><text x="1210" y="736">POSTURE</text>
+  </g>
+  <line x1="72" y1="752" x2="1368" y2="752" stroke="#e6e9ee"/>
+  <g font-family="Arial, sans-serif" font-size="16" fill="#242932">
+    <text x="72" y="792">High Intent — Core Product</text><text x="610" y="792">$4,620</text><text x="800" y="792">61</text><text x="1048" y="792">$75.74</text><text x="1210" y="792" fill="#29984c">Protect</text>
+    <text x="72" y="830">Category Education</text><text x="610" y="830">$1,662</text><text x="800" y="830">12</text><text x="1048" y="830">$138.50</text><text x="1210" y="830" fill="#d49c00">Repair</text>
+  </g>
+</svg>

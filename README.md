@@ -23,7 +23,7 @@ This system is designed around four practical questions:
 
 ## What I built
 
-- **Decision dashboard:** spend, conversion efficiency, visibility loss, search-term waste, change history, and pipeline health in one operator view.
+- **Decision dashboard:** spend, conversion efficiency, visibility loss, search-term waste, and campaign health in one operator view.
 - **Deterministic opportunity rules:** candidates are generated from explicit thresholds before any AI or human interpretation.
 - **Business-first recommendations:** the interface separates what to protect, what to repair, and what to validate before scaling.
 - **Read-only posture:** the public prototype makes no account changes and contains no live account connection.

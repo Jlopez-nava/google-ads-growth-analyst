@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
   <title id="title">Fictional paid-search decision dashboard</title>
-  <desc id="desc">A recruiter-facing dashboard preview containing only synthetic Acme data.</desc>
+  <desc id="desc">A public dashboard preview containing only synthetic Acme data.</desc>
   <rect width="1440" height="900" fill="#f5f6fa"/>
   <rect width="1440" height="132" fill="#ffffff"/>
   <circle cx="74" cy="64" r="28" fill="#4285f4"/>

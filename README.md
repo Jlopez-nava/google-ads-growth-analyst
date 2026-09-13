@@ -1,81 +1,136 @@
 # Google Ads Growth Analyst
 
-**A decision-focused Google Ads data system built to surface what deserves attention—without making uncontrolled account changes.**
+**Turn paid-search performance data into a clear protect, repair, and scale decision brief.**
 
-This public prototype turns a fictional paid-search snapshot into a marketer-friendly decision dashboard. The goal is to help an operator spend less time assembling reports and more time deciding where to protect, fix, or scale.
+This dashboard is designed for the part of Google Ads management that happens after reporting: deciding what deserves attention, what needs validation, and what should happen next. It brings performance, search intent, budget pressure, visibility loss, and recommended priorities into one operator view.
 
-![Synthetic Google Ads dashboard](assets/google-ads-dashboard-demo.svg)
+![The actual Google Ads Growth Analyst overview running locally](assets/google-ads-dashboard-live.jpg)
 
-> The screenshot and checked fallback dataset are synthetic. No client account identifiers, search terms, spend, or user emails are included in this public repository.
+_Actual application screen using a completely fictional account and synthetic campaign data._
 
-## The marketing problem
+## What it does
 
-Google Ads data is easy to view but harder to operationalize. Conversion lag can make yesterday’s performance misleading, reporting pipelines can fail silently, and automated recommendations can move faster than a marketer’s confidence.
+The public application loads a safe demonstration snapshot and organizes it into five working views:
 
-This system is designed around four practical questions:
-
-| Operator question | System response |
+| View | What it helps answer |
 |---|---|
-| Is the data complete enough to use? | Clear reporting period and source labels |
-| What changed versus the prior period? | Comparable spend, traffic, conversion, and efficiency metrics |
-| Where is performance leaking? | Ranked search-term, keyword, campaign, budget, and rank opportunities |
-| What should happen next? | A decision brief with protect, repair, and scale priorities |
+| Overview | What happened across spend, traffic, conversions, CPA, and daily movement? |
+| Daily Trend | Is delivery or response changing over time? |
+| Campaigns | Which campaigns are carrying efficiency, volume, and visibility? |
+| Search Intent | Which queries converted, and which high-spend terms deserve review? |
+| Decision Brief | What should be protected, repaired, measured, or tested next? |
 
-## What I built
+The dashboard calculates metrics such as CTR, average CPC, CPA, daily spend, and zero-conversion query spend. It also surfaces impression share lost to budget versus rank so the next action is tied to the actual constraint.
 
-- **Decision dashboard:** spend, conversion efficiency, visibility loss, search-term waste, and campaign health in one operator view.
-- **Deterministic opportunity rules:** candidates are generated from explicit thresholds before any AI or human interpretation.
-- **Business-first recommendations:** the interface separates what to protect, what to repair, and what to validate before scaling.
-- **Read-only posture:** the public prototype makes no account changes and contains no live account connection.
-
-## System flow
+## From reporting to decisions
 
 ```mermaid
 flowchart LR
-    A[Fictional paid-search snapshot] --> B[Metric calculations]
+    A[Paid-search snapshot] --> B[Metric calculations]
     B --> C[Campaign and query views]
-    C --> D[Opportunity rules]
-    D --> E[Decision dashboard]
-    E --> F[Human-owned next steps]
+    C --> D[Opportunity signals]
+    D --> E[Protect, repair, and scale brief]
+    E --> F[Human review and approval]
+    F -. Full private system .-> G[Google Ads API execution]
 ```
 
-## Business safeguards
+The full system is designed to send approved changes through the Google Ads API. This public version stops at recommendation and human review: it contains no OAuth credentials, customer IDs, live sync jobs, or write-capable mutation endpoints.
 
-- All public data is fictional and labeled as a demo snapshot.
-- Recommendations remain separate from account execution.
-- The dashboard calls out evidence and uncertainty before suggesting scale.
-- Live credentials, account identifiers, sync jobs, and mutation logic are excluded.
+## Search-intent analysis
 
-## Current status
+The search-term view separates converting intent from spend that needs a closer look. Nothing is changed automatically in the public application.
 
-Working public prototype of the read-only decision dashboard. The repository intentionally omits live account sync, database migrations, deployment settings, credentials, and mutation infrastructure.
+![The actual search-intent review screen](assets/google-ads-search-intent-live.jpg)
 
-## Run the dashboard locally
+## Decision brief
 
-Requirements: Node.js 22+ and pnpm.
+The final view translates the visible signals into a marketer-owned operating posture: what to scale carefully, what to protect immediately, and what measurement questions must be resolved first.
+
+![The actual Google Ads decision brief](assets/google-ads-decision-brief-live.jpg)
+
+## What is included
+
+| Capability | Public repository |
+|---|---|
+| Interactive decision dashboard | Included |
+| Daily, campaign, keyword, and search-term views | Included |
+| Derived efficiency and visibility metrics | Included |
+| Fictional demonstration dataset | Included |
+| Recommendation and prioritization interface | Included |
+| Live Google Ads account connection | Not included |
+| OAuth credentials or customer identifiers | Never included |
+| Approved-change execution | Not included in the public version |
+
+## Install and run
+
+### Requirements
+
+- Node.js 22.13 or newer
+- pnpm 11 or newer
+
+No API key, environment file, database, or Google Ads account is required for the public demo.
+
+### 1. Clone the project
 
 ```bash
-cd site
+git clone https://github.com/Jlopez-nava/google-ads-growth-analyst.git
+cd google-ads-growth-analyst/site
+```
+
+### 2. Install dependencies
+
+```bash
 pnpm install
+```
+
+### 3. Start the dashboard
+
+```bash
 pnpm dev
 ```
 
-The dashboard always loads the included synthetic demo dataset.
+Open [http://localhost:3000](http://localhost:3000). The synthetic account loads immediately, so you can explore every tab without connecting an external service.
 
-## Repository guide
+## Use your own local sample data
+
+The demonstration dataset lives in:
 
 ```text
-site/                         Read-only decision dashboard
-site/lib/google-ads-data.ts   Fictional demo dataset
-assets/                       Inspectable SVG product preview
+site/lib/google-ads-data.ts
 ```
 
-## Privacy and security
+Replace the values in `snapshotData` with your own non-sensitive local sample, preserving the existing `DashboardData` shape. Do not commit real customer IDs, search terms, spend, user emails, or credentials.
 
-- No credentials or environment files are included.
-- No live account connection or write-capable automation is included.
-- Public demo data uses fictional account, campaign, keyword, and actor details.
-- No client, employer, or confidential operational data is included.
+## Build and verify
+
+```bash
+pnpm lint
+pnpm exec tsc --noEmit
+pnpm build
+```
+
+For a production preview after building:
+
+```bash
+pnpm exec vinext start
+```
+
+## Project map
+
+```text
+site/app/                               Application entry point and global styles
+site/components/decision-dashboard.tsx Dashboard views and decision interface
+site/lib/google-ads-data.ts             Typed fictional dataset
+assets/                                 Real screenshots from the running app
+```
+
+## Data and safety boundaries
+
+- Every account, campaign, keyword, query, date, and metric in the repository is fictional.
+- The public application makes no outbound Google Ads requests.
+- Recommendations remain separate from execution.
+- No credentials, environment files, client data, or employer data are included.
+- The screenshots above were captured directly from the running public application.
 
 ## Stack
 

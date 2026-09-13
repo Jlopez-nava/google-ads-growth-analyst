@@ -2,7 +2,7 @@
 
 **A decision-focused Google Ads data system built to surface what deserves attention—without making uncontrolled account changes.**
 
-This recruiter-facing prototype turns a fictional paid-search snapshot into a marketer-friendly decision dashboard. The goal is to help an operator spend less time assembling reports and more time deciding where to protect, fix, or scale.
+This public prototype turns a fictional paid-search snapshot into a marketer-friendly decision dashboard. The goal is to help an operator spend less time assembling reports and more time deciding where to protect, fix, or scale.
 
 ![Synthetic Google Ads dashboard](assets/google-ads-dashboard-demo.svg)
 
@@ -41,14 +41,14 @@ flowchart LR
 
 ## Business safeguards
 
-- All public data is fictional and labeled as a portfolio snapshot.
+- All public data is fictional and labeled as a demo snapshot.
 - Recommendations remain separate from account execution.
 - The dashboard calls out evidence and uncertainty before suggesting scale.
 - Live credentials, account identifiers, sync jobs, and mutation logic are excluded.
 
 ## Current status
 
-Working portfolio prototype of the read-only decision dashboard. The public repository intentionally omits live account sync, database migrations, deployment settings, credentials, and mutation infrastructure.
+Working public prototype of the read-only decision dashboard. The repository intentionally omits live account sync, database migrations, deployment settings, credentials, and mutation infrastructure.
 
 ## Run the dashboard locally
 
@@ -60,13 +60,13 @@ pnpm install
 pnpm dev
 ```
 
-The dashboard always loads the included synthetic portfolio dataset.
+The dashboard always loads the included synthetic demo dataset.
 
 ## Repository guide
 
 ```text
 site/                         Read-only decision dashboard
-site/lib/google-ads-data.ts   Fictional portfolio dataset
+site/lib/google-ads-data.ts   Fictional demo dataset
 assets/                       Inspectable SVG product preview
 ```
 
